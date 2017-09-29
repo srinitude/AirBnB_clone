@@ -29,6 +29,9 @@ class HBNBCommand(cmd.Cmd):
         return True
 
     def emptyline(self):
+        """
+        Overrides empty line to not execute last command
+        """
         pass
 
 if __name__ == "__main__":
