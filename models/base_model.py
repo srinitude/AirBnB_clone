@@ -32,10 +32,10 @@ class BaseModel:
         """
         The pretty String representation of a BaseModel
         """
-        base_class_name = self.__class__.__name__
-        base_id = self.id
-        base_dict = self.__dict__
-        return "[{}] ({}) {}".format(base_class_name, base_id, base_dict)
+        class_name = self.__class__.__name__
+        obj_id = self.id
+        obj_dict = self.__dict__
+        return "[{}] ({}) {}".format(class_name, obj_id, obj_dict)
 
     def save(self):
         """
