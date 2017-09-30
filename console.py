@@ -5,6 +5,7 @@ Here's all of the code for the HBNB console
 
 import cmd
 from models.base_model import BaseModel
+import models
 
 class HBNBCommand(cmd.Cmd):
     """
@@ -47,6 +48,18 @@ class HBNBCommand(cmd.Cmd):
             print(instance.id)
         except NameError:
             print("** class doesn't exist **")
+
+    def do_show(self, *args):
+        """
+        Usage: show [class name] [id]
+        """
+        fields = args[0].split(sep=" ")
+        class_name = fields[0]
+        class_id = fields[1]
+        objects = models.storage.all()
+        for obj in objects.values():
+            if class_name == obj.__class__.__name__ and class_id == obj.id:
+                print(obj)
 
 if __name__ == "__main__":
     HBNBCommand().cmdloop()
