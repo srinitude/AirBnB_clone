@@ -170,9 +170,7 @@ class HBNBCommand(cmd.Cmd):
                 except IndexError:
                     print("** attribute name missing **")
                     return
-            else:
-                print("** no instance found **")
-                return
+        print("** no instance found **")
 
 if __name__ == "__main__":
     HBNBCommand().cmdloop()
