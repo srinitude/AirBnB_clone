@@ -57,7 +57,7 @@ class HBNBCommand(cmd.Cmd):
         if not args[0]:
             print("** class name missing **")
             return
-        try:     
+        try:
             fields = args[0].split(sep=" ")
             class_name = fields[0]
             _ = eval(class_name)()
@@ -101,6 +101,41 @@ class HBNBCommand(cmd.Cmd):
                 return
         print("** no instance found **")
 
-   
+    def do_all(self, *args):
+        """
+        Usage: all [optional class name]
+        """
+        result = "["
+        first = True
+        objects = models.storage.all()
+        if not args[0]:
+            for obj in objects.values():
+                if first:
+                    result += str(obj)
+                    first = False
+                else:
+                    result += ","
+                    result += "\n"
+                    result += str(obj)
+        else:
+            try:
+                _ = eval(args[0])
+                for obj in objects.values():
+                    class_name = obj.__class__.__name__
+                    if class_name == args[0]:
+                        if first:
+                            result += str(obj)
+                            first = False
+                        else:
+                            result += ","
+                            result += "\n"
+                            result += str(obj)
+            except NameError:
+                print("** class doesn't exist **")
+                return
+        result += "]"
+        print(result)
+
+
 if __name__ == "__main__":
     HBNBCommand().cmdloop()
