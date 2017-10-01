@@ -16,7 +16,6 @@ class HBNBCommand(cmd.Cmd):
     intro += "-----------  Type quit or EOF to exit the program  -----------\n"
     prompt = "(hbnb) "
 
-    # ------- basic HBNB console commands -------
     def do_quit(self, arg):
         """
         Quit console
@@ -57,10 +56,10 @@ class HBNBCommand(cmd.Cmd):
         if not args[0]:
             print("** class name missing **")
             return
-        try:     
+        try:
             fields = args[0].split(sep=" ")
             class_name = fields[0]
-            _ = eval(class_name)()
+            _ = eval(class_name)
             class_id = fields[1]
         except NameError:
             print("** class doesn't exist **")
@@ -85,7 +84,7 @@ class HBNBCommand(cmd.Cmd):
         try:
             fields = args[0].split(sep=" ")
             class_name = fields[0]
-            _ = eval(class_name)()
+            _ = eval(class_name)
             class_id = fields[1]
         except NameError:
             print("** class doesn't exist **")
@@ -101,6 +100,78 @@ class HBNBCommand(cmd.Cmd):
                 return
         print("** no instance found **")
 
-   
+    def do_all(self, *args):
+        """
+        Usage: all [optional class name]
+        """
+        result = "["
+        first = True
+        objects = models.storage.all()
+        if not args[0]:
+            for obj in objects.values():
+                if first:
+                    result += str(obj)
+                    first = False
+                else:
+                    result += ","
+                    result += "\n"
+                    result += str(obj)
+        else:
+            try:
+                _ = eval(args[0])
+                for obj in objects.values():
+                    class_name = obj.__class__.__name__
+                    if class_name == args[0]:
+                        if first:
+                            result += str(obj)
+                            first = False
+                        else:
+                            result += ","
+                            result += "\n"
+                            result += str(obj)
+            except NameError:
+                print("** class doesn't exist **")
+                return
+        result += "]"
+        print(result)
+
+    def do_update(self, *args):
+        """
+        Usage: update [class name] [id] [attribute name] "[attribute value]"
+        """
+        if not args[0]:
+            print("** class name missing **")
+            return
+        try:
+            fields = args[0].split(sep=" ")
+            class_name = fields[0]
+            _ = eval(class_name)
+            class_id = fields[1]
+        except NameError:
+            print("** class doesn't exist **")
+            return
+        except IndexError:
+            print("** instance id missing **")
+            return
+        objects = models.storage.all()
+        for obj in objects.values():
+            if obj.id == class_id:
+                try:
+                    name = fields[2]
+                    try:
+                        val = fields[3]
+                        val = val.strip("\"'")
+                        setattr(obj, name, str(val))
+                        return
+                    except IndexError:
+                        print("** value missing **")
+                        return
+                except IndexError:
+                    print("** attribute name missing **")
+                    return
+            else:
+                print("** no instance found **")
+                return
+
 if __name__ == "__main__":
     HBNBCommand().cmdloop()
