@@ -162,6 +162,7 @@ class HBNBCommand(cmd.Cmd):
                         val = fields[3]
                         val = val.strip("\"'")
                         setattr(obj, name, str(val))
+                        models.storage.save()
                         return
                     except IndexError:
                         print("** value missing **")
