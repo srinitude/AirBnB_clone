@@ -6,7 +6,7 @@ JSON file to instances
 
 import json
 from models.base_model import BaseModel
-
+from models.user import User
 
 class FileStorage:
     """
@@ -48,7 +48,9 @@ class FileStorage:
             with open(FileStorage.__file_path, "r") as fs:
                 obj_dicts = json.load(fs)
                 for key, d in obj_dicts.items():
-                    new_obj = BaseModel(**d)
+                    class_name = d["__class__"]
+                    print(class_name)
+                    new_obj = eval(class_name)(**d)
                     FileStorage.__objects[key] = new_obj
         except FileNotFoundError:
             return
