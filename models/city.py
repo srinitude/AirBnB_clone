@@ -10,5 +10,5 @@ class City(BaseModel):
     """
     Class City that inherits from BaseModel
     """
-    state_id = State.id
+    state_id = ""
     name = ""
