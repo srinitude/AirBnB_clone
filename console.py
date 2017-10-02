@@ -179,5 +179,13 @@ class HBNBCommand(cmd.Cmd):
                     return
         print("** no instance found **")
 
+    def default(self, line):
+        if line[0].isupper():
+            fields = line.split(sep=".")
+            class_name = fields[0]
+            command = fields[1].strip("()")
+            method_name = "HBNBCommand().do_" + command
+            eval(method_name)(class_name)
+
 if __name__ == "__main__":
     HBNBCommand().cmdloop()
