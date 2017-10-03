@@ -183,9 +183,26 @@ class HBNBCommand(cmd.Cmd):
         if line[0].isupper():
             fields = line.split(sep=".")
             class_name = fields[0]
-            command = fields[1].strip("()")
-            method_name = "HBNBCommand().do_" + command
-            eval(method_name)(class_name)
+            try:
+                _ = eval(class_name)
+                try:
+                    args = fields[1].split("(")
+                    command = args[0]
+                    method_name = "HBNBCommand().do_" + command
+                    obj_id = args[1].strip(")\"'")
+                    if len(obj_id):
+                        user_input = "{} {}".format(class_name, obj_id)
+                        eval(method_name)(user_input)
+                    else:
+                        eval(method_name)(class_name)
+                except IndexError:
+                    super().default(line)
+                except AttributeError:
+                    print("** invalid command: {} **".format(command))
+            except NameError:
+                print("** class doesn't exist **")
+        else:
+            super().default(line)
 
 if __name__ == "__main__":
     HBNBCommand().cmdloop()
