@@ -120,8 +120,7 @@ class HBNBCommand(cmd.Cmd):
                     result += str(obj)
                     first = False
                 else:
-                    result += ","
-                    result += "\n"
+                    result += ", "
                     result += str(obj)
         else:
             try:
@@ -133,8 +132,7 @@ class HBNBCommand(cmd.Cmd):
                             result += str(obj)
                             first = False
                         else:
-                            result += ","
-                            result += "\n"
+                            result += ", "
                             result += str(obj)
             except NameError:
                 print("** class doesn't exist **")
