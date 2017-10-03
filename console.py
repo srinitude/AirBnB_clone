@@ -180,6 +180,9 @@ class HBNBCommand(cmd.Cmd):
         print("** no instance found **")
 
     def default(self, line):
+        """
+        Method called on an input line when the command prefix is not recognized
+        """
         if line[0].isupper():
             fields = line.split(sep=".")
             class_name = fields[0]
