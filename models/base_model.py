@@ -17,7 +17,7 @@ class BaseModel:
         Initializer of a BaseModel
         """
         fmt = "%Y-%m-%dT%H:%M:%S.%f"
-        if kwargs:
+        if len(kwargs):
             if "id" in kwargs:
                 self.id = kwargs["id"]
             if "created_at" in kwargs:
