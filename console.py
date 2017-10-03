@@ -140,6 +140,27 @@ class HBNBCommand(cmd.Cmd):
         result += "]"
         print(result)
 
+    def do_count(self, *args):
+        """
+        Usage: count [optional class name]
+        """
+        count = 0
+        objects = models.storage.all()
+        if not args[0]:
+            for obj in objects.values():
+                count += 1
+        else:
+            try:
+                _ = eval(args[0])
+                for obj in objects.values():
+                    class_name = obj.__class__.__name__
+                    if class_name == args[0]:
+                        count += 1
+            except NameError:
+                print("** class doesn't exist **")
+                return
+        print(count)
+
     def do_update(self, *args):
         """
         Usage: update [class name] [id] [attribute name] "[attribute value]"
