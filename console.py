@@ -200,7 +200,7 @@ class HBNBCommand(cmd.Cmd):
 
     def default(self, line):
         """
-        Method called on an input line when the command prefix is not recognized
+        Method called on an input line when the command is not recognized
         """
         if line[0].isupper():
             fields = line.split(sep=".")
