@@ -13,6 +13,12 @@ from models.amenity import Amenity
 from models.place import Place
 from models.review import Review
 
+def remove_punc(string):
+    new_string = ""
+    for char in string:
+        if char != "," and char != "\"":
+            new_string += char
+    return new_string
 
 class HBNBCommand(cmd.Cmd):
     """
@@ -212,6 +218,7 @@ class HBNBCommand(cmd.Cmd):
                     command = args[0]
                     method_name = "HBNBCommand().do_" + command
                     obj_id = args[1].strip(")\"'")
+                    obj_id = remove_punc(obj_id)
                     if len(obj_id):
                         user_input = "{} {}".format(class_name, obj_id)
                         eval(method_name)(user_input)
