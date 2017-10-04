@@ -20,7 +20,7 @@
 
 ## Installation
 1. Go to our [AirBnB clone Github](https://github.com/srinitude/AirBnB_clone) page and copy the repository.
-![](https://thumbs.gfycat.com/RelievedCourageousAmoeba-size_restricted.gif)
+![](https://gfycat.com/gifs/detail/RelievedCourageousAmoeba.gif)
 2. Clone the repository into your terminal.
 ![](https://thumbs.gfycat.com/MixedIdealLeech-size_restricted.gif)
 
