@@ -31,6 +31,19 @@ class BaseModel:
         models.storage.new(self)
         models.storage.save()
 
+    def __setattr__(self, attr, value):
+        """
+        Lets BaseModel handle type casting
+        """
+        fmt = "%Y-%m-%dT%H:%M:%S.%f"
+
+        if attr == "created_at" and type(value) is str:
+            self.created_at = datetime.strptime(value, fmt)
+        elif attr == "updated_at" and type(value) is str:
+            self.updated_at = datetime.strptime(value, fmt)
+        else:
+            super().__setattr__(attr, value)
+
     def __str__(self):
         """
         The pretty String representation of a BaseModel
