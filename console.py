@@ -13,12 +13,14 @@ from models.amenity import Amenity
 from models.place import Place
 from models.review import Review
 
+
 def remove_punc(string):
     new_string = ""
     for char in string:
         if char != "," and char != "\"":
             new_string += char
     return new_string
+
 
 class HBNBCommand(cmd.Cmd):
     """
