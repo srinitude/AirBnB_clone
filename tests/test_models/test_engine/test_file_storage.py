@@ -8,6 +8,7 @@ import inspect
 from models.engine import file_storage
 import pep8
 import unittest
+import os
 FileStorage = file_storage.FileStorage
 
 
@@ -16,6 +17,7 @@ class TestFileStorageDocs(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         """Set up for the doc tests"""
+        os.remove("file.json")
         cls.fs_f = inspect.getmembers(FileStorage, inspect.isfunction)
 
     def test_pep8_conformance_file_storage(self):
