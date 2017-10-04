@@ -26,9 +26,6 @@ class HBNBCommand(cmd.Cmd):
     """
     Welcome to the console
     """
-    intro = "-----------       Welcome to the HBNB console      -----------\n"
-    intro += "-----------       Type help to list commands       -----------\n"
-    intro += "-----------  Type quit or EOF to exit the program  -----------\n"
     prompt = "(hbnb) "
 
     def do_quit(self, arg):
