@@ -4,14 +4,13 @@
 
 ## Welcome
 
+
 ## Table of Contents
 * [Requirements](#requirements)
 * [Installation](#installation)
 * [Usage](#usage)
 * [Commands](#commands)
-* [Roadmap](#roadmap)
-* [Testing](#testing)
-* [Credits](#credits)
+* [Authors](#authors)
 * [License](#license)
 
 ## Requirements
@@ -22,7 +21,7 @@
 1. Go to our [AirBnB clone Github](https://github.com/srinitude/AirBnB_clone) page and copy the repository.
 ![](https://thumbs.gfycat.com/RelievedCourageousAmoeba-size_restricted.gif)
 2. Clone the repository into your terminal.
-![](https://thumbs.gfycat.com/MixedIdealLeech-size_restricted.gif)
+![](https://thumbs.gfycat.com/AnimatedDopeyConey-size_restricted.gif)
 
 ## Usage
 1. Start up the console by typing './console'.
@@ -30,16 +29,21 @@
 ![](https://thumbs.gfycat.com/TenderRareAztecant-size_restricted.gif)
 
 ## Commands
-[x] quit
-[x] EOF
-[x] create
-[x] show
-[x] destroy
-[x] all
-[x] update
+- [x] quit
+- [x] EOF
+- [x] create
+- [x] show
+- [x] destroy
+- [x] all
+- [x] update
 
-## Testing
-
-## Credits
+## Authors
+* Kiren Srinivasan
+	* [Twitter](https://twitter.com/srinitude)
+	* [Github](https://github.com/srinitude)
+* Jeffrey Kanemitsu
+	* [Twitter](https://twitter.com/canofmisosoup)
+	* [Github](https://github.com/jeffreykanemitsu)
 
 ## License
+AirBnB clone is released under the MIT license. See [LICENSE](https://github.com/srinitude/AirBnB_clone/blob/master/LICENSE) for details.
