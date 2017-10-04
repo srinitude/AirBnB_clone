@@ -19,11 +19,10 @@
 * Pep8 version 1.7
 
 ## Installation
-1. Go to our [AirBnB clone Github](https://github.com/srinitude/AirBnB_clone) page.
+1. Go to our [AirBnB clone Github](https://github.com/srinitude/AirBnB_clone) page and copy the repository.
+![](https://thumbs.gfycat.com/RelievedCourageousAmoeba-size_restricted.gif)
 2. Clone the repository into your terminal.
-![](https://thumbs.gfycat.com/QuerulousAltruisticArthropods-size_restricted.gif)
 ![](https://thumbs.gfycat.com/MixedIdealLeech-size_restricted.gif)
-
 
 ## Usage
 
