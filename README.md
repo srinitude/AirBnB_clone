@@ -12,7 +12,6 @@
 This is part one to the [Holberton](https://www.holbertonschool.com/) AirBnB clone project. For this project, we created a command interpreter to manipulate data without a visual interface. The functionality of our version of the command interpreter allows us create new objects, retrieves an object from a file or database, perform operations on objects such as counting, updating attributes of an object, and destroying an object.
 
 ## Table of Contents
-* [Requirements](#requirements)
 * [Installation](#installation)
 * [Usage](#usage)
 * [Commands](#commands)
@@ -20,10 +19,6 @@ This is part one to the [Holberton](https://www.holbertonschool.com/) AirBnB clo
 * [Authors](#authors)
 * [License](#license)
 
-## Requirements
-* Ubuntu 14.04 LTS
-* PEP8 v1.7
-* Python v3.4.3
 ## Installation
 * Clone the repository into your terminal.
 
