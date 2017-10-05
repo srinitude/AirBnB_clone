@@ -20,11 +20,13 @@ This is part one to the [Holberton](https://www.holbertonschool.com/) AirBnB clo
 * Python v3.4.3
 ## Installation
 * Clone the repository into your terminal.
+
 ![](https://thumbs.gfycat.com/AnimatedDopeyConey-size_restricted.gif)
 
 ## Usage
 1. Start up the console by typing `./console`.
 2. Type 'help' to see what commands are available.
+
 ![](https://thumbs.gfycat.com/TenderRareAztecant-size_restricted.gif)
 
 ## Commands
@@ -39,12 +41,14 @@ This is part one to the [Holberton](https://www.holbertonschool.com/) AirBnB clo
 
 #### Methods
 All, show, destroy, and update can be used with the method syntax as shown below:
+
 ![](https://thumbs.gfycat.com/CapitalForkedItaliangreyhound-size_restricted.gif)
 
 ![](https://thumbs.gfycat.com/ThankfulQuerulousCatbird-size_restricted.gif)
 
 ## Testing
 This project was tested using "unittest" in the AirBnB_clone/tests directory:
+
 ![](https://thumbs.gfycat.com/DearDamagedCivet-size_restricted.gif)
 
 ## Authors
