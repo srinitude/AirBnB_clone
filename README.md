@@ -2,6 +2,12 @@
 
 <img src="https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/263/HBTN-hbnb-Final.png" style="height:15%;width:15%" />
 
+![Python](https://img.shields.io/badge/Python-v3.4.3-blue.svg)
+![Ubuntu](https://img.shields.io/badge/Ubuntu-14.04 LTS-orange.svg)
+![PEP8](https://img.shields.io/badge/PEP8-v1.7-grey.svg)
+
+
+
 ## Welcome
 This is part one to the [Holberton](https://www.holbertonschool.com/) AirBnB clone project. For this project, we created a command interpreter to manipulate data without a visual interface. The functionality of our version of the command interpreter allows us create new objects, retrieves an object from a file or database, perform operations on objects such as counting, updating attributes of an object, and destroying an object.
 
