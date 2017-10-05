@@ -3,8 +3,8 @@
 <img src="https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/263/HBTN-hbnb-Final.png" style="height:15%;width:15%" />
 
 ![Python](https://img.shields.io/badge/Python-v3.4.3-blue.svg)
-![Ubuntu](https://img.shields.io/badge/Ubuntu-14.04 LTS-orange.svg)
-![PEP8](https://img.shields.io/badge/PEP8-v1.7-grey.svg)
+![Ubuntu](https://img.shields.io/badge/Ubuntu-14.04_LTS-orange.svg)
+![PEP8](https://img.shields.io/badge/PEP8-v1.7-lightgrey.svg)
 
 
 
