@@ -37,7 +37,7 @@ This is part one to the [Holberton](https://www.holbertonschool.com/) AirBnB clo
 - [x] update
 - [x] count
 
-* Methods
+#### Methods
 All, show, destroy, and update can be used with the method syntax as shown below:
 ![](https://thumbs.gfycat.com/CapitalForkedItaliangreyhound-size_restricted.gif)
 
