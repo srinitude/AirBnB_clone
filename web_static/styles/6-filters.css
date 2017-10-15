@@ -57,3 +57,8 @@
 .filters > button:hover {
     opacity: 0.9;
 }
+
+/* Popover */
+.popover {
+    display: none;
+}
