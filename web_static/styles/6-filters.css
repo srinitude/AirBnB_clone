@@ -60,14 +60,28 @@
 
 /* Popover */
 .popover {
-    display: none;
     background-color: #fafafa;
     position: absolute;
     width: 100%;
+    padding: 25px;
     border: 1px solid #dddddd;
-    list-style: none;
-    top: 80%;
+    top: 100%;
+    margin: 0;
     left: 0;
+    display: none;
+}
+
+.locations .popover {
+    padding: 10px 30px 40px 30px;
+}
+
+.amenities .popover {
+    left: -3.5px;
+}
+
+/* Takes out bullets for popover and children lists */
+.popover, .popover ul {
+    list-style: none;
 }
 
 .popover h2 {
@@ -76,4 +90,14 @@
 
 .filters div:hover > .popover {
     display: block;
+}
+
+.city {
+    position: relative;
+    right: 20px;
+    padding-bottom: 10px;
+}
+
+.amenity {
+    padding-bottom: 10px;
 }
