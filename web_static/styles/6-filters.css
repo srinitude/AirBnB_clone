@@ -1,0 +1,59 @@
+/* The entire filters section */
+.filters {
+    position: relative;
+    height: 70px;
+    width: 100%;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+}
+
+/* The filters themselves*/
+.filters div {
+    display: inline-block;
+    position: relative;
+    top: 0px;
+    width: 25%;
+    height: 100%;
+}
+
+/* The locations filter */
+.locations {
+    border-right: 1px solid #dddddd;
+}
+
+/* The filter titles */
+.filters div h3 {
+    position: absolute;
+    font-weight: 600;
+    top: 10px;
+    left: 50px;
+    margin: 0;
+}
+
+/* The filter subtitles */
+.filters div h4 {
+    position: relative;
+    font-weight: 400;
+    top: 35px;
+    left: 50px;
+    margin: 0;
+}
+
+/* The search button */
+.filters > button {
+    font-size: 18px;
+    background-color: #ff5a5f;
+    color: white;
+    height: 48px;
+    width: 20%;
+    border: 0px;
+    border-radius: 4px;
+    position: absolute;
+    right: 30px;
+    top: 10px;
+    text-align: center;
+}
+
+.filters > button:hover {
+    opacity: 0.9;
+}
