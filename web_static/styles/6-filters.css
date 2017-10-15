@@ -61,4 +61,19 @@
 /* Popover */
 .popover {
     display: none;
+    background-color: #fafafa;
+    position: absolute;
+    width: 100%;
+    border: 1px solid #dddddd;
+    list-style: none;
+    top: 80%;
+    left: 0;
 }
+
+.popover h2 {
+    font-size: 16px;
+}
+
+.filters div:hover > .popover {
+    display: block;
+} 
