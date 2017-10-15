@@ -55,9 +55,6 @@ This project was tested using "unittest" in the AirBnB_clone/tests directory:
 * Kiren Srinivasan
 	* [Twitter](https://twitter.com/srinitude)
 	* [Github](https://github.com/srinitude)
-* Jeffrey Kanemitsu
-	* [Twitter](https://twitter.com/canofmisosoup)
-	* [Github](https://github.com/jeffreykanemitsu)
 
 ## License
 AirBnB clone is released under the MIT license. See [LICENSE](https://github.com/srinitude/AirBnB_clone/blob/master/LICENSE) for details.
